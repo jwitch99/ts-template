@@ -1,0 +1,17 @@
+Install Windows Build Tools - must be done as admin
+
+# Not sure if this is needed or not but if you have an issue install this too
+# Allows you to compile native node modules - run as admin
+npm install --global --production windows-build-tools
+
+# Required for development
+npm install -g concurrently nodemon
+
+#Required to build and test for production
+npm install -g pm2 archiver
+
+
+Browser extensions to install
+
+- React DevTools
+- Redux DevTool

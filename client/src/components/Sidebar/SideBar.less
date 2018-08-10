@@ -1,0 +1,39 @@
+@import '../../styles/variables';
+
+#Sidebar {
+  background: white;
+  display: flex;
+  width: 90px;
+  position: fixed;
+  left: 0;
+  top: 62px;
+  align-items: center;
+  flex-direction: column;
+  bottom: 0;
+  text-align: center;
+  border-right: 2px solid rgba(235, 237, 250, 1);
+  padding-top: 48px;
+  z-index: 1000;
+
+  a {
+    color: @primary-gray-menu;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100% - 20px);
+    padding: 10px;
+    transition: color .3s, border-color 0.3s;
+    transition-timing-function: ease-in;
+
+    &:hover {
+      color: @primary-gray-menu-hover
+    }
+
+    &.active {
+      color: @primary-blue !important;
+      border-right: 3px solid @primary-blue-lighter;
+      padding: 10px 7px 10px 10px;
+    }
+  }
+}

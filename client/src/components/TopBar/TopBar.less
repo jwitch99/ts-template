@@ -1,0 +1,73 @@
+@import '../../styles/variables';
+
+#TopBar {
+  background: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  border-bottom: 2px solid rgba(235, 237, 250, 1);
+  opacity: 0.94;
+  font-weight: 600;
+  z-index: 1000;
+
+  nav {
+    position: absolute;
+    left: 200px;
+    height: 100%;
+    display: inline-flex;
+  }
+
+  a {
+    color: @primary-gray-menu-20;
+    text-decoration: none;
+    height: 60px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+    padding: 0 10px;
+    transition: color .3s, border-color 0.3s;
+    transition-timing-function: ease-in;
+    position: relative;
+    &.active {
+      color: @primary-blue !important;
+    }
+
+    &:after {
+      opacity: 0;
+      background-color: @primary-blue;
+      transition: opacity 0.1s;
+      transition-timing-function: ease-out;
+      content: ' ';
+      width: 100%;
+      height: 3px;
+      position: absolute;
+      bottom: -1px;
+    }
+
+    &.active:after {
+      opacity: 1;
+    }
+
+    &:hover {
+      color: @primary-gray-menu-35;
+    }
+  }
+
+}
+
+#ProfileAvatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  position: absolute;
+  right: 20px;
+  height: 60px;
+
+  :first-child {
+    margin-right: 10px;
+  }
+}

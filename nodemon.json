@@ -1,0 +1,10 @@
+{
+  "ignore": ["client"],
+  "events": {
+    "restart": ""
+  },
+  "ext": "ts js styl",
+  "execMap": {
+    "ts": "ts-node"
+  }
+}

@@ -1,0 +1,25 @@
+@import '../../styles/variables';
+
+#DashboardContainer {
+  background: white;
+  border: 1px solid @gray-border;
+
+  > div:nth-child(1) {
+    border-right: 1px solid @gray-border;
+  }
+
+   > div:nth-child(5) {
+    border-left: 1px solid @gray-border;
+    border-right: 1px solid @gray-border;
+  }
+
+  > div {
+    padding: 8px 12px 12px 12px;
+  }
+
+}
+
+#CustomerText {
+  border-top: 1px solid @gray-border;
+  border-bottom: 1px solid @gray-border;
+}

@@ -1,0 +1,9 @@
+{
+  "apps": [
+    {
+      "name": "APPLICATION_NAME",
+      "script": "./start.js",
+      "log_date_format": "MM-DD HH:mm"
+    }
+  ]
+}

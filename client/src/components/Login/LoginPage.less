@@ -1,0 +1,93 @@
+@import '../../styles/variables';
+
+@spacing: 8px;
+
+form {
+  padding: @spacing *4;
+  background: white;
+  border: 1px solid @gray-border;
+  box-sizing: border-box;
+  border-radius: 3.8px;
+  margin-top: @spacing * 4;
+  position: relative;
+
+  .fields {
+    margin-top: @spacing * 5;
+    margin-bottom: @spacing * 6;
+    display: flex;
+    flex-direction: column;
+    > :nth-child(2) {
+      margin-top: @spacing * 4;
+    }
+  }
+
+  button {
+    width: 100%;
+    margin: 0 0 @spacing * 2 0 !important;
+  }
+}
+
+#LoginPage {
+  text-align: center;
+  width: 400px;
+  margin: auto;
+  padding-top: 100px;
+}
+
+#ForgotPassword {
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  background: white;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  right: 0;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  pointer-events: all;
+  opacity: 1;
+
+  overflow-y: hidden;
+  transition-property: all;
+  transition-duration: .5s;
+  transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+
+  svg {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+  }
+
+  h2 {
+    margin-bottom: 5%;
+  }
+
+  p {
+    margin-bottom: 3%;
+    width: 80%;
+  }
+
+  h2, p, svg {
+    transition-delay: .2s;
+    transition-property: all;
+    transition-duration: .4s;
+    transition-timing-function: ease-in;
+  }
+
+  &.closed {
+    transition-delay: 0s;
+    pointer-events: none;
+    max-height: 0 !important;
+
+    h2, p, svg {
+      opacity: 0;
+    }
+  }
+}
+
+#ForgotPasswordText {
+  cursor: pointer;
+}
